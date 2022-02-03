@@ -7,4 +7,4 @@ from .serializers import TodoSerializer
 class TodoViewSet(viewsets.ModelViewSet):
     queryset = Todo.objects.all()
     serializer_class = TodoSerializer
-    allowed_methods = ['GET', 'POST', 'PUT', 'DELETE']
+    http_method_names = ['get', 'post', 'put', 'delete']
